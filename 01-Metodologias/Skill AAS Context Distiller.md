@@ -25,14 +25,14 @@ OBJECTIVE: Escanear la conversación informal o el brainstorming, extraer la
 En el desarrollo de software, el mayor riesgo no es el código, sino **la ambigüedad en la comunicación**. La misión de este Skill es actuar como un embudo: recibe idioma humano no estructurado (ideas sueltas, "quiero hacer un...", "estuve pensando en...") y lo traduce a una especificación técnica de arranque.
 
 ## 2. Lógica de Ejecución (Workflow)
-Cuando se invoca este Skill, el agente debe suspender cualquier otra tarea y ejecutar el siguiente protocolo:
+Cuando se invoca este Skill, el agente debe **terminar lo que está haciendo** (cerrar su estado actual) y detonar una cadena de delegación estructurada: primero manda a los **agentes de análisis** para entender el terreno, luego a los **agentes que ordenan/planifican**, y finalmente a los **agentes que ejecutan**, siguiendo este protocolo:
 
 1. **Ingesta Silenciosa:** Analizar los últimos mensajes del historial o el prompt crudo provisto por el usuario.
 2. **Extracción de Entidades:** 
    - **El Core:** ¿Cuál es el problema real a resolver?
    - **Restricciones:** ¿Hay limitantes de stack, tiempo o negocio?
    - **Actores:** ¿Quién va a usar esto?
-3. **Mapeo Ontológico (El Metro):** Identificar en qué estación de nuestra arquitectura debe arrancar el trabajo. ¿Es un feature de Frontend? ¿Es un rediseño de Dominio (DDD)? ¿Es Infraestructura pura?
+3. **Mapeo Ontológico (El Metro):** Evaluar **en qué parte del viaje estamos parados actualmente** y **hacia dónde queremos ir**. En lugar de solo adivinar la estación de arranque, se debe trazar la ruta completa desde el estado actual hasta la estación de destino (Frontend, Infraestructura, Dominio, etc.).
 4. **Output (El Entregable):** Generar y presentar al usuario un plan inicial formateado con:
    - Resumen del requerimiento destilado.
    - Lista de Agentes / Skills involucrados.
