@@ -496,11 +496,12 @@
       }
     ];
 
-    const STORAGE_KEY = 'voveda_kanban_tasks_v1';
+    const STORAGE_KEY = 'ai_vault_kanban_tasks_v1';
+    const LEGACY_STORAGE_KEY = 'voveda_kanban_tasks_v1';
 
     function loadTasks() {
       try {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY);
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {

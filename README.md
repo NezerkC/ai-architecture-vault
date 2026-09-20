@@ -1,5 +1,10 @@
 # Architecture Agent Network & Obsidian Vault
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Obsidian Vault](https://img.shields.io/badge/Obsidian-Vault-7C3AED.svg?logo=obsidian&logoColor=white)](https://obsidian.md)
+[![Multi-Agent Network](https://img.shields.io/badge/Agents-Network%20Ontology-blue.svg)](https://github.com/NezerkC/ai-architecture-vault)
+[![Clean Architecture](https://img.shields.io/badge/Architecture-Clean%20%2F%20Hexagonal-107C41.svg)](https://github.com/NezerkC/ai-architecture-vault)
+
 Sistema integral de arquitectura de software, infraestructura cloud-native y metodologías de ingeniería para desarrollo guiado por agentes de IA y navegación de conocimiento en Obsidian.
 
 Compatible con **Antigravity**, **Claude Code**, **Cursor**, **OpenCode** y **Obsidian**.
@@ -87,12 +92,12 @@ Agradecemos contribuciones que fortalezcan los patrones de arquitectura, incorpo
 
 1. **Fork** del repositorio en GitHub:
    ```bash
-   https://github.com/NezerkC/voveda-arquitectura
+   https://github.com/NezerkC/ai-architecture-vault
    ```
 2. **Clonar** tu fork localmente:
    ```bash
-   git clone https://github.com/TU-USUARIO/voveda-arquitectura.git
-   cd voveda-arquitectura
+   git clone https://github.com/NezerkC/ai-architecture-vault.git
+   cd ai-architecture-vault
    ```
 3. **Crear una rama** para tu cambio:
    ```bash
