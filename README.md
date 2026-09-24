@@ -36,14 +36,14 @@ architecture-vault/
 ├── 00-Mapa-Ruteo-Dijkstra.md          # Matriz de pesos y costos de ruteo
 ├── 00-Ontologia-Metro.md              # Glosario y modelo conceptual
 ├── 00-TEMPLATE-*.md                   # Plantillas oficiales para nuevas notas
-├── 01-Metodologias/                   # XDD (TDD, BDD, DDD, CDD, RDD, EDD)
+├── 01-Metodologias/                   # XDD (TDD, BDD, DDD, CDD, RDD, EDD, SDD)
 ├── 02-Patrones/                       # Hexagonal, Clean, Modular, EDA, CQRS
 ├── 03-Contratos-Validacion/           # JSON Schema, OpenAPI, Pydantic, Zod
 ├── 04-Gobernanza/                     # ADRs, RFCs, Fitness Functions
 ├── 05-Resiliencia/                    # Circuit Breaker, Outbox, Retry Jitter
 ├── 06-Observabilidad/                 # OpenTelemetry, SLI/SLO, Logging JSON
 ├── 07-Seguridad/                      # Zero Trust, Sanitización, Sandboxing
-├── 08-Lenguajes/                      # TypeScript, Python, Go, Rust
+├── 08-Lenguajes/                      # TypeScript, Python, Kotlin, Go, Rust
 ├── 09-Frameworks/                     # FastAPI, NextJS, NestJS Fastify
 ├── 10-Persistencia/                   # PostgreSQL, Vector DB, Redis Cache
 ├── 11-DevOps-Infra/                   # Docker OCI, Kubernetes, CI/CD, Terraform

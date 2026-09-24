@@ -22,6 +22,7 @@ Sistema integral de arquitectura de software, infraestructura cloud-native y met
 ### 01. Metodologías de Diseño y Desarrollo (XDD)
 - [[Agente RDD]] — *README-Driven Development (Visión e interfaz pública)*
 - [[Agente BDD]] — *Behavior-Driven Development (Escenarios en Gherkin)*
+- [[Agente SDD]] — *Spec-Driven Development (Fases de cambio, tareas atómicas y orquestación)*
 - [[Agente DDD]] — *Domain-Driven Design (Bounded Contexts, Entidades y Agregados)*
 - [[Agente CDD]] — *Contract-Driven Development (Fronteras e interfaces formales)*
 - [[Agente TDD]] — *Test-Driven Development (Pruebas unitarias deterministas)*
@@ -66,6 +67,7 @@ Sistema integral de arquitectura de software, infraestructura cloud-native y met
 ### 08. Especialistas en Lenguajes
 - [[Agente TypeScript]] — *Tipado estricto, Result Types y tsconfig de producción*
 - [[Agente Python]] — *Python 3.12+, Mypy estricto, AsyncIO y empaquetado con uv*
+- [[Agente Kotlin]] — *Kotlin 2.0+, Coroutines, Flow, Jetpack Compose y KMP en IntelliJ IDEA*
 - [[Agente Go]] — *Interfaces idiomáticas, concurrencia segura y context propagation*
 - [[Agente Rust]] — *Memory safety, Tokio async y Traits para puertos*
 

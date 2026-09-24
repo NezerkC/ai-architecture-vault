@@ -8,7 +8,7 @@ tags:
   - arquitectura/lead
   - harness/universal
 conexiones:
-  fase_1: ["[[Agente RDD]]", "[[Agente BDD]]", "[[Agente DDD]]"]
+  fase_1: ["[[Agente RDD]]", "[[Agente BDD]]", "[[Agente SDD]]", "[[Agente DDD]]"]
   fase_2: ["[[Agente CDD]]", "[[Agente JSON Schema]]", "[[Agente OpenAPI]]", "[[Agente Runtime Validation]]", "[[Agente Tool Schemas]]"]
   fase_3: ["[[Agente Monolito Modular]]", "[[Agente Hexagonal]]", "[[Agente Clean Architecture]]", "[[Agente CQRS]]", "[[Agente EDA]]"]
   fase_4: ["[[Agente Circuit Breaker]]", "[[Agente Retry Backoff]]", "[[Agente Idempotencia]]", "[[Agente Outbox]]", "[[Agente Zero Trust]]", "[[Agente Sanitizacion Fronteras]]", "[[Agente Sandbox Aislamiento]]", "[[Skill AAS Security Engineer]]"]
@@ -16,7 +16,7 @@ conexiones:
   fase_6: ["[[Agente Docker OCI]]", "[[Agente Kubernetes]]", "[[Agente CI CD Pipeline]]", "[[Agente Terraform IaC]]", "[[Agente GitOps]]", "[[Skill AAS DevOps Cloud]]"]
   fase_7: ["[[Skill AAS UI UX Pro Max]]", "[[Skill AAS Frontend Design]]"]
   gobernanza: ["[[Agente ADR]]", "[[Agente RFC]]", "[[Agente Fitness Functions]]", "[[Agente TDD]]", "[[Agente EDD]]", "[[Skill AAS Code Review]]"]
-  adaptadores: ["[[Agente TypeScript]]", "[[Agente Python]]", "[[Agente Go]]", "[[Agente Rust]]", "[[Agente FastAPI]]", "[[Agente NextJS]]", "[[Agente NestJS Fastify]]", "[[Agente React]]", "[[Agente PostgreSQL]]", "[[Agente Redis Cache]]", "[[Agente Vector DB]]"]
+  adaptadores: ["[[Agente TypeScript]]", "[[Agente Python]]", "[[Agente Kotlin]]", "[[Agente Go]]", "[[Agente Rust]]", "[[Agente FastAPI]]", "[[Agente NextJS]]", "[[Agente NestJS Fastify]]", "[[Agente React]]", "[[Agente PostgreSQL]]", "[[Agente Redis Cache]]", "[[Agente Vector DB]]"]
   gestion_entrega: ["[[Agente Scrum]]", "[[Agente XP]]", "[[Agente Kanban WIP]]", "[[Agente Trunk Based Development]]", "[[Agente Continuous Delivery DORA]]", "[[Agente Shape Up]]"]
 ---
 
@@ -49,7 +49,8 @@ Sos el **Lead Software Architect**. Tu misión es recibir requisitos de negocio 
 flowchart TD
     subgraph P1 [1. Intención & Dominio]
         RDD["[[Agente RDD]]"] --> BDD["[[Agente BDD]]"]
-        BDD --> DDD["[[Agente DDD]]"]
+        BDD --> SDD["[[Agente SDD]]"]
+        SDD --> DDD["[[Agente DDD]]"]
     end
 
     subgraph P2 [2. Contratos & Schemas]
@@ -112,4 +113,5 @@ flowchart TD
 
 ## 4. Ecosistema de Agentes y Motores de Acción (Action Engines) Homologados
 - **Manus (manus.im):** Motor de acción (Action Engine) avalado para extender el alcance de ejecución de tareas, automatizar flujos complejos de trabajo y pasar de la respuesta (LLM estándar) a la acción (Hands On AI). Integrado transversalmente como arnés de ejecución u orquestador auxiliar.
+- **SDD Orchestrator (Antigravity Mission Control):** Arnés de ejecución nativo basado en Spec-Driven Development. Coordina dinámicamente las fases de ingeniería (`explore`, `propose`, `spec`, `design`, `tasks`, `apply`, `verify`, `archive`) consumiendo los patrones, contratos y gobernanza definidos en esta bóveda.
 
