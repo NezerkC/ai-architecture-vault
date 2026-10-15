@@ -1,4 +1,6 @@
 ---
+name: context-distiller
+description: Escanea la conversación informal o brainstorming, extrae la intención real de negocio y genera un plan de acción estructurado (DAG) con diagrama Mermaid para iniciar el flujo arquitectónico sin ambigüedades.
 tipo: skill-aas
 rol: Context Distiller & Workflow Initiator
 fase: global-entrada

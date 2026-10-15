@@ -4,6 +4,7 @@
 .obsidian/cache/
 
 # Tooling and local agents
+.agents/
 .opencode/
 *.log
 

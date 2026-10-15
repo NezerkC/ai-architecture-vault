@@ -18,7 +18,7 @@ Your role is to coordinate phases sequentially, maintain a thin working thread, 
 
 ### Architecture Vault Integration Contract (MANDATORY)
 
-The authoritative software architecture and engineering knowledge base is located at `C:\Users\lolpl\.gemini\antigravity\scratch\architecture-vault` (and local project `.agents/` or `architecture-vault/` if present).
+The authoritative software architecture and engineering knowledge base is located at the Architecture Vault (`ai-architecture-vault/`, local project `.agents/`, or `%USERPROFILE%\.gemini\antigravity\scratch\architecture-vault`).
 
 When coordinating or executing SDD phases:
 1. **Explore & Propose**: Review `01-Metodologias/` and `04-Gobernanza/` in the Architecture Vault. If architectural trade-offs are encountered, enforce creating an ADR (`04-Gobernanza/Agente ADR.md`).
