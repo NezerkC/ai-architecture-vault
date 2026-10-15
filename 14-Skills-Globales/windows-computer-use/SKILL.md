@@ -10,10 +10,10 @@ Use this skill whenever you need to interact with the Windows desktop, analyze r
 ## Architecture & Execution Engine
 
 All helper scripts reside in:
-`C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\`
+`$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\`
 
 The dedicated Python runtime containing all required Windows automation packages (`pywin32`, `pywinauto`, `uiautomation`, `pyautogui`, `pillow`, `psutil`) is located at:
-`C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe`
+`$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe`
 
 Always execute the automation scripts using this dedicated Python executable.
 
@@ -37,17 +37,17 @@ When executing GUI tasks, always follow this cognitive loop:
 
 ### List All Visible Windows (with HWNDs, geometry, and foreground status)
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\inspect_windows.py"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\inspect_windows.py"
 ```
 
 ### Filter Windows by Title or Process Name
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\inspect_windows.py" --title "Visual Studio Code"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\inspect_windows.py" --title "Visual Studio Code"
 ```
 
 ### Inspect Top Processes (Task Manager View: CPU & Memory)
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\inspect_windows.py" --tasks
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\inspect_windows.py" --tasks
 ```
 
 ---
@@ -58,17 +58,17 @@ Always prefer structural UI inspection before blind coordinate guessing. This re
 
 ### Inspect Interactive Controls for a Window (by Title or HWND)
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\inspect_ui.py" --title "Notepad"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\inspect_ui.py" --title "Notepad"
 ```
 
 ### Search for Specific Buttons or Fields
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\inspect_ui.py" --title "Settings" --search "Bluetooth"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\inspect_ui.py" --title "Settings" --search "Bluetooth"
 ```
 
 ### Output Clean JSON for Programmatic Parsing
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\inspect_ui.py" --hwnd 123456 --json
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\inspect_ui.py" --hwnd 123456 --json
 ```
 
 ---
@@ -79,12 +79,12 @@ When an application renders custom canvas/graphics (or when UI Automation is una
 
 ### Full Desktop Screenshot with Coordinate Grid Overlay
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\capture_screen.py" --grid --step 100 --out "C:\Users\lolpl\.gemini\antigravity\scratch\current_desktop.png"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\capture_screen.py" --grid --step 100 --out "$env:USERPROFILE\.gemini\antigravity\scratch\current_desktop.png"
 ```
 
 ### Crop Screenshot to a Specific Window
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\capture_screen.py" --title "Fan Control" --out "C:\Users\lolpl\.gemini\antigravity\scratch\app_window.png"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\capture_screen.py" --title "Fan Control" --out "$env:USERPROFILE\.gemini\antigravity\scratch\app_window.png"
 ```
 
 View the generated image using `view_file` to calibrate exact targets.
@@ -95,48 +95,48 @@ View the generated image using `view_file` to calibrate exact targets.
 
 ### Focus Window (brings to top and restores if minimized)
 ```powershell
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" focus --title "Visual Studio Code"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" focus --title "Visual Studio Code"
 ```
 
 ### Click Coordinates
 ```powershell
 # Left Click
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" click --x 510 --y 780
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" click --x 510 --y 780
 
 # Right Click or Double Click
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" click --x 300 --y 450 --button right
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" click --x 300 --y 450 --button double
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" click --x 300 --y 450 --button right
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" click --x 300 --y 450 --button double
 ```
 
 ### Type Text
 ```powershell
 # Type text and press Enter
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" type --text "Hello world" --enter
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" type --text "Hello world" --enter
 
 # Clear field first (Ctrl+A -> Backspace) and type
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" type --text "New text" --clear
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" type --text "New text" --clear
 ```
 
 ### Key Combos & Shortcuts
 ```powershell
 # Open Run dialog
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "win+r"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "win+r"
 
 # Switch apps or close window
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "alt+tab"
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "alt+f4"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "alt+tab"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "alt+f4"
 
 # Standard controls: Escape, Enter, Tab
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "esc"
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" hotkey --keys "esc"
 ```
 
 ### Scroll & Drag
 ```powershell
 # Scroll down 5 clicks
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" scroll --clicks -5 --x 500 --y 500
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" scroll --clicks -5 --x 500 --y 500
 
 # Drag from (100, 200) to (500, 200)
-& "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "C:\Users\lolpl\.gemini\config\skills\windows-computer-use\scripts\interact.py" drag --start-x 100 --start-y 200 --end-x 500 --end-y 200
+& "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\.venv\Scripts\python.exe" "$env:USERPROFILE\.gemini\config\skills\windows-computer-use\scripts\interact.py" drag --start-x 100 --start-y 200 --end-x 500 --end-y 200
 ```
 
 ---

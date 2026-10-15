@@ -9,7 +9,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).parent
 # Notes allowed to have no inbound wikilinks (entry points or non-vault docs).
-ENTRY_POINTS = {"Indice General", "README", "CLAUDE", "AGENTS"}
+ENTRY_POINTS = {"Indice General", "README", "CLAUDE", "AGENTS", "GEMINI"}
 LINK = re.compile(r"\[\[([^\]|#]+)")
 CODE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
 
