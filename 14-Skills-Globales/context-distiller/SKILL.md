@@ -1,4 +1,6 @@
 ---
+name: context-distiller
+description: Destila conversaciones informales o brainstorming en un plan estructurado (requerimiento destilado, agentes involucrados, diagrama Mermaid) antes de programar. Úsala cuando el usuario tira ideas sueltas ("quiero hacer un...", "estuve pensando en...") y hay que convertirlas en una especificación de arranque.
 tipo: skill-aas
 rol: Context Distiller & Workflow Initiator
 fase: global-entrada

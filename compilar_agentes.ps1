@@ -39,5 +39,15 @@ foreach ($skill in $skills) {
     $count++
 }
 
+# Skills globales: ya tienen formato nativo (<nombre>/SKILL.md), se copian completas
+$globalPath = Join-Path $vaultPath "14-Skills-Globales"
+foreach ($dir in Get-ChildItem -Path $globalPath -Directory) {
+    $skillDestDir = Join-Path $targetPath $dir.Name
+    robocopy $dir.FullName $skillDestDir /E /XD .venv __pycache__ /NFL /NDL /NJH /NJS /NP | Out-Null
+    if ($LASTEXITCODE -ge 8) { throw "robocopy falló para $($dir.Name) (código $LASTEXITCODE)" }
+    Write-Host "  ✅ Skill global: $($dir.Name)" -ForegroundColor Green
+    $count++
+}
+
 Write-Host "🎉 Pipeline terminado. Se compilaron $count skills." -ForegroundColor Cyan
 Write-Host "Antigravity ahora cargará estas skills nativamente en su memoria." -ForegroundColor Yellow

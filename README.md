@@ -49,7 +49,12 @@ architecture-vault/
 ├── 11-DevOps-Infra/                   # Docker OCI, Kubernetes, CI/CD, Terraform
 ├── 12-Metodologias-Agiles/            # Scrum, XP, Trunk-Based, Kanban, Shape Up
 ├── 13-Presentacion-Frontend/          # Design Systems, UI/UX, Componentes
+├── 14-Skills-Globales/                # Skills ejecutables (<nombre>/SKILL.md), SSOT
 ├── Agente Orquestador.md              # Orquestador maestro del pipeline
+├── 00-Buzon-Mejoras.md                # Propuestas de mejora entre IAs
+├── AGENTS.md                          # Guía compartida para agentes (CLAUDE.md la importa)
+├── check_vault.py                     # Linter: links rotos, huérfanos, frontmatter
+├── compilar_agentes.ps1               # Exporta skills a ../.agents/skills
 ├── Indice General.md                  # Dashboard principal de navegación
 └── landing-agents.html                # Visualizador interactivo de agentes
 ```
@@ -70,7 +75,7 @@ architecture-vault/
 - **Base de Conocimiento**: Apuntar el contexto del agente a esta carpeta para que utilice los estándares formales de arquitectura al proponer o escribir código.
 - **Invocación de Especialistas**: Cuando se requiera implementar un estándar concreto, consultar la nota del agente correspondiente (ejemplo: leer `05-Resiliencia/Agente Circuit Breaker.md` para replicar el patrón de resiliencia exacto).
 - **Orquestación**: Utilizar `Agente Orquestador.md` como prompt de sistema o rol director cuando un agente deba liderar el diseño de una solución de punta a punta.
-- **Pipeline GitOps (Habilidades Nativas)**: Ejecutar `.\compilar_agentes.ps1` (Docs-as-Code). Este script escanea la bóveda, lee los YAML Frontmatters y compila/exporta los archivos Markdown estáticos a la carpeta oculta `.agents/skills/SKILL.md`, volviendo las Skills ejecutables de manera nativa para Antigravity.
+- **Pipeline GitOps (Habilidades Nativas)**: Ejecutar `.\compilar_agentes.ps1` (Docs-as-Code). Exporta las notas `Skill *.md` y las carpetas de `14-Skills-Globales/` a `../.agents/skills/<nombre>/SKILL.md` (directorio padre del repo), volviéndolas ejecutables de manera nativa para Antigravity. Las notas `Agente *.md` son conocimiento de referencia y no se exportan.
 
 ---
 
@@ -85,8 +90,9 @@ Agradecemos contribuciones que fortalezcan los patrones de arquitectura, incorpo
    - Para un nuevo pilar de dominio: utilizar `00-TEMPLATE-Pilar-Dominio.md`.
    - Para un hub o intersección: utilizar `00-TEMPLATE-Hub-Relacional.md`.
 2. **Frontmatter YAML**: Toda nota debe incluir metadatos estandarizados al inicio (`tipo`, `tags`, `dominio`).
-3. **Enlaces Bidireccionales**: Cada nuevo agente debe conectarse con su pilar, sus dependencias y estar indexado en `Indice General.md` y `00-Catalogo-Skills-Multiagente.md`.
+3. **Enlaces Bidireccionales**: Cada nuevo agente debe conectarse con su pilar, sus dependencias y estar indexado en `Indice General.md` (y en `00-Catalogo-Skills-Multiagente.md` solo si participa de un workflow multiagente).
 4. **Calidad de Contenido (Conceptos > Código)**: Los documentos no son snippets triviales; deben detallar el problema técnico, la solución canónica, los trade-offs y los criterios de validación.
+5. **Validación**: Ejecutar `python check_vault.py` antes de abrir el PR; debe imprimir `OK`.
 
 ### Flujo de Trabajo con Git
 

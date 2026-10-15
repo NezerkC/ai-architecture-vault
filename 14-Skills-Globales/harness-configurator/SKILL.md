@@ -1,4 +1,4 @@
-﻿---
+---
 name: harness-configurator
 description: Configura, valida y ajusta los sandboxes de los motores de agentes integrados (Claude Code, OpenCode, Antigravity, Hermes/DeepSeek) en harnesses/.
 ---

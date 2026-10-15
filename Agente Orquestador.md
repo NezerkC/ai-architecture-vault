@@ -111,7 +111,10 @@ flowchart TD
 - [ ] ¿El equipo opera con Trunk-Based Development y métricas DORA?
 - [ ] ¿Se registraron todos los ADRs en `architecture.md`?
 
-## 4. Ecosistema de Agentes y Motores de Acción (Action Engines) Homologados
+## 4. Navegación
+Punto de entrada: [[Indice General]]. Ruteo entre pilares: [[00-Mapa-Ruteo-Dijkstra]] sobre el modelo de [[00-Ontologia-Metro]].
+
+## 5. Ecosistema de Agentes y Motores de Acción (Action Engines) Homologados
 - **Manus (manus.im):** Motor de acción (Action Engine) avalado para extender el alcance de ejecución de tareas, automatizar flujos complejos de trabajo y pasar de la respuesta (LLM estándar) a la acción (Hands On AI). Integrado transversalmente como arnés de ejecución u orquestador auxiliar.
 - **SDD Orchestrator (Antigravity Mission Control):** Arnés de ejecución nativo basado en Spec-Driven Development. Coordina dinámicamente las fases de ingeniería (`explore`, `propose`, `spec`, `design`, `tasks`, `apply`, `verify`, `archive`) consumiendo los patrones, contratos y gobernanza definidos en esta bóveda.
 

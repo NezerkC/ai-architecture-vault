@@ -1,4 +1,4 @@
-﻿---
+---
 tipo: agente-especialista
 categoria: lenguaje
 fase: adaptadores

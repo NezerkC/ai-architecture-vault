@@ -15,6 +15,16 @@ Sistema integral de arquitectura de software, infraestructura cloud-native y met
 ## 🧭 Orquestador Principal
 - [[Agente Orquestador]] — *Lead Software Architect (Pipeline DAG, gobernanza y síntesis de `architecture.md`)*
 
+## 🗺️ Mapas de la Red (Ontología Metro)
+- [[00-Ontologia-Metro]] — *Glosario y modelo conceptual (entradas, estaciones, líneas, hubs)*
+- [[00-Mapa-Red-Metro-Lineas]] — *Líneas y flujos transversales entre pilares*
+- [[00-Mapa-Ruteo-Dijkstra]] — *Matriz de pesos y ruta crítica del pipeline*
+- [[00-Catalogo-Skills-Multiagente]] — *Workflows multiagente y orden de ejecución*
+- [[00-Protocolo-Ingesta-Repositorios]] — *Triaje de repositorios y dependencias externas antes de incorporarlos*
+- [[ADR-001-Escalabilidad-Skills]] · [[Hub-Seguridad]] — *Hubs relacionales y su justificación*
+- [[00-Buzon-Mejoras]] — *Propuestas de mejora compartidas entre IAs (pendientes de aprobación)*
+- Plantillas: [[00-TEMPLATE-Skill-Especialista]] · [[00-TEMPLATE-Pilar-Dominio]] · [[00-TEMPLATE-Hub-Relacional]]
+
 ---
 
 ## 🗂️ Catálogo Completo de Agentes Especialistas (13 Módulos)
@@ -27,6 +37,7 @@ Sistema integral de arquitectura de software, infraestructura cloud-native y met
 - [[Agente CDD]] — *Contract-Driven Development (Fronteras e interfaces formales)*
 - [[Agente TDD]] — *Test-Driven Development (Pruebas unitarias deterministas)*
 - [[Agente EDD]] — *Eval-Driven Development (Evaluación estadística de IA y Golden Datasets)*
+- [[Skill AAS Context Distiller]] — *Destilación de contexto e inicio de workflow (entrada global)*
 
 ### 02. Patrones Arquitectónicos
 - [[Agente Monolito Modular]] — *Módulos cohesivos con API pública e internal aislada*
@@ -89,6 +100,7 @@ Sistema integral de arquitectura de software, infraestructura cloud-native y met
 - [[Agente Terraform IaC]] — *Infrastructure as Code modular con remote state locking*
 - [[Agente GitOps]] — *Despliegues declarativos con ArgoCD / Flux y auto-healing*
 - [[Skill AAS DevOps Cloud]] — *Automatización de infraestructura cloud y pipelines de despliegue*
+- [[Skill AAS RPA Windows]] — *Automatización de escritorio Windows (RPA)*
 
 ### 12. Metodologías Ágiles e Ingeniería de Entrega
 - [[Agente Scrum]] — *Sprints con Definition of Done e incremento vertical (INVEST)*
@@ -101,6 +113,9 @@ Sistema integral de arquitectura de software, infraestructura cloud-native y met
 ### 13. Presentación & Frontend (Pilar AAS)
 - [[Skill AAS UI UX Pro Max]] — *Sistemas de diseño, wireframes y tokens visuales*
 - [[Skill AAS Frontend Design]] — *Implementación de componentes, Tailwind y Server Components*
+
+### 14. Skills Globales (SSOT de skills ejecutables)
+Carpetas `14-Skills-Globales/<nombre>/SKILL.md` con frontmatter `name`/`description`, listas para instalar en cualquier harness: `architecture-vault` (consulta bajo demanda de esta bóveda), `architecture-audit`, `cazador-de-webs`, `context-distiller`, `critic`, `excalidraw-skill`, `harness-configurator`, `nlm-skill`, `production-project-architect`, `project-critic-optimizer`, `sdd-orchestrator`, `start-new-project`, `windows-computer-use`.
 
 ---
 

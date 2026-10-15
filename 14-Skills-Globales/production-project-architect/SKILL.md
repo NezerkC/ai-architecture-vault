@@ -1,4 +1,4 @@
-﻿---
+---
 name: production-project-architect
 description: Orquestador maestro de arquitectura e ingeniería de software para crear proyectos de producción end-to-end (Dominio DDD, Capas Hexagonales, Base de Datos ACID, Testing TDD/Fitness y CI/CD).
 ---

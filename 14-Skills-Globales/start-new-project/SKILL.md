@@ -1,4 +1,4 @@
-﻿---
+---
 name: start-new-project
 description: Inicia el onboarding y descubrimiento de un nuevo proyecto guiado por el Agente Product Manager y el Agente Scrum Master.
 ---

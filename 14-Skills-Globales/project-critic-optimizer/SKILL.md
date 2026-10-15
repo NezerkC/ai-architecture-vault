@@ -1,4 +1,4 @@
-﻿---
+---
 name: project-critic-optimizer
 description: Evalua, somete a prueba de estres y optimiza proyectos, ideas tecnicas, disenos de hardware o propuestas de negocio mediante analisis multiagente en paralelo, sin adulacion ni complacencia. Usala cuando el usuario pida juzgar una idea, buscar puntos ciegos, optimizar costos o materiales, comparar alternativas o requerir una evaluacion critica y rigurosa.
 ---

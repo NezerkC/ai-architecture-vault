@@ -6,7 +6,7 @@ usos: [maquetado-visual, design-system, logica-cliente, estado-y-ruteo]
 capacidades: [ui-ux, frontend-architecture, interpretacion-design-tokens]
 rol: Frontend Lead & UI/UX Architect
 harness_compatible: ["universal"]
-dependencias_sugeridas: ["[[Estacion Contratos]]"]
+dependencias_sugeridas: ["[[Agente Runtime Validation]]", "[[Agente JSON Schema]]"]
 tags:
   - origen/aas
   - uso/maquetado-visual

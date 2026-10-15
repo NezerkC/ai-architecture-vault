@@ -1,4 +1,4 @@
-﻿---
+---
 name: architecture-audit
 description: Auditoría exhaustiva de arquitectura de software. Explica el paso a paso, qué hacer, cómo hacerlo, la distribución de capas y genera un informe de remediación priorizado.
 parameters:

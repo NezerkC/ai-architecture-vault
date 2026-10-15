@@ -11,3 +11,11 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local agent state
+.atl/
